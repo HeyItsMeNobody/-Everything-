@@ -9,6 +9,6 @@ bot.on('ready', () => {
     });
 });
 
-bot.login(config.discordToken)
+bot.login(config.discord.discordToken)
 
 module.exports = bot;
