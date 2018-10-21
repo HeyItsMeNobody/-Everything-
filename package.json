@@ -13,6 +13,7 @@
     "discord.js": "^11.4.2",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
-    "random-hex-color": "^1.0.1"
+    "random-hex-color": "^1.0.1",
+    "twit": "^2.2.11"
   }
 }
