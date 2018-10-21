@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Everything!</title>
+        <style>
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: <%= randomColor %>;
+                position: -webkit-sticky;
+                position: sticky;
+                top: 0;
+            }
+            li {
+                float: left;
+            }
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+            li a:hover {
+                background-color: #111;
+            }
+            input[type=text] {
+                background-color: <%= randomColor %>;
+                color: white;
+                padding: 12px 20px;
+                margin: 8px 0;
+                box-sizing: border-box;
+                border: none;
+            }
+            button {
+                background-color: <%= randomColor %>;
+                color: white;
+                padding: 12px 20px;
+                margin: 8px 0;
+                box-sizing: border-box;
+                cursor: pointer;
+                border: none;
+            }
+            body {
+                font-family: 'Open Sans', sans-serif;
+            }
+            p {
+                color: gray;
+            }
+        </style>
+    </head>
+
+    <body>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/discord">Discord</a></li>
+            </ul>
+        </nav>
+
+        <h1>"The discord control panel"</h1>
+        <p>The discord control panel for Everything!</p>
+        <iframe name="hiddenFrame" width="0" height="0" style="display: none;"></iframe>
+        <form action="/discord-sendmessage" method="post" target="hiddenFrame">
+            <input type="text" name="channelID" value="ChannelID">
+            <input type="text" name="message" value="Message">
+            <button type="submit">Send</button>
+        </form>
+    </body>
+</html>

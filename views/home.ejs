@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Everything!</title>
+        <style>
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: <%= randomColor %>;
+                position: -webkit-sticky;
+                position: sticky;
+                top: 0;
+            }
+            li {
+                float: left;
+            }
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+            li a:hover {
+                background-color: #111;
+            }
+            body {
+                font-family: 'Open Sans', sans-serif;
+            }
+        </style>
+    </head>
+
+    <body>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/discord">Discord</a></li>
+            </ul>
+        </nav>
+
+        <h1>Everything!</h1>
+    </body>
+</html>
