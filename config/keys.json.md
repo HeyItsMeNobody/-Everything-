@@ -1,7 +1,7 @@
 # Example of keys.json
 {
     "discord": {
-        "discordToken": "NTAzNTY2NjAzNDA5OTQ4Njcy.Dq4Wjg.orl3UAzVzYrBZzb1JwCoAPgsHXQ"
+        "discordToken": ""
     },
     "twitter": {
         "consumer_key": "",
