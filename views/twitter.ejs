@@ -50,6 +50,14 @@
             p {
                 color: gray;
             }
+            .timeline {
+                position: absolute;
+                top: 60px;
+                right: 0;
+                width: 25%;
+                height: 85%;
+                border: 0;
+            }
         </style>
     </head>
 
@@ -64,12 +72,16 @@
             </ul>
         </nav>
 
+        <!-- Title and description -->
         <h1>"The twitter control panel"</h1>
         <p>The twitter control panel for Everything!</p>
+        <!-- Send twitter message -->
         <iframe name="hiddenFrame" width="0" height="0" style="display: none;"></iframe>
         <form action="/twitter-sendmessage" method="post" target="hiddenFrame">
             <input type="text" name="message" value="Message">
             <button type="submit">Tweet</button>
         </form>
+        <!-- Timeline -->
+        <iframe src="/twitter-timeline" class="timeline"></iframe>
     </body>
 </html>
