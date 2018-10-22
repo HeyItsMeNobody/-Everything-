@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const randomHexColor = require('random-hex-color');
 const bodyParser = require('body-parser');
-const twitter = require('./twitterBot.js');
+const twitter = require('../exports/twitterBot.js');
 
 router.use(bodyParser.urlencoded({extended:true}));
 

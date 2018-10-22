@@ -1,8 +1,8 @@
 const express = require('express');
 const app = express();
 const randomHexColor = require('random-hex-color');
-const discordRoutes = require('./discordRoutes.js');
-const twitterRoutes = require('./twitterRoutes.js');
+const discordRoutes = require('./routes/discordRoutes.js');
+const twitterRoutes = require('./routes/twitterRoutes.js');
 
 // View engine
 app.set('view engine', 'ejs');

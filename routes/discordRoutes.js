@@ -1,8 +1,7 @@
 const router = require('express').Router();
 const randomHexColor = require('random-hex-color');
 const bodyParser = require('body-parser');
-const discord = require('./discordBot.js');
-const packagejson = require('./package.json');
+const discord = require('../exports/discordBot.js');;
 
 router.use(bodyParser.urlencoded({extended:true}));
 

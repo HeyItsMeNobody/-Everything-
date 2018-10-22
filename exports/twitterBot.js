@@ -1,5 +1,5 @@
 const Twit = require('twit');
-const config = require('./config/keys.json');
+const config = require('../config/keys.json');
 
 var T = new Twit({
     consumer_key: config.twitter.consumer_key,

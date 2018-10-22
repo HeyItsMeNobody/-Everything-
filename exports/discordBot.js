@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-const config = require('./config/keys.json');
+const config = require('../config/keys.json');
 
 bot.on('ready', () => {
     console.log(`Discord "module" loaded UwU`);
