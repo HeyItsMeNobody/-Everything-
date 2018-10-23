@@ -1,7 +1,8 @@
 const router = require('express').Router();
 const randomHexColor = require('random-hex-color');
 const bodyParser = require('body-parser');
-const discord = require('../exports/discordBot.js');;
+const discord = require('../exports/discordBot.js');
+const request = require('request');
 
 router.use(bodyParser.urlencoded({extended:true}));
 
@@ -25,6 +26,20 @@ router.post('/discord-sendmessage', (req, res) => {
     catch (err) {
         res.send(`Channel with the id ${channelID} does not exist UWU`)
     }
+});
+
+router.post('/discord-sendinsult', (req, res) => {
+    request('https://insult.mattbas.org/api/insult.txt', function(error, response, body) {
+        let channelID = req.body.channelID;
+        try {
+            discord.channels.get(channelID).send(body);
+            res.redirect('/discord')
+        }
+        catch (err) {
+            res.send(`Channel with the id ${channelID} does not exist UWU`)
+        }
+        console.log(body)
+    });
 });
 
 module.exports = router;
